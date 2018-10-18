@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>CS12-InClass</title>
+
+        <style type="text/css">
+            /* Your styles go here */
+
+            body {
+                text-align: center;
+            }
+        </style>
+        <script type="text/javascript">
+            
+            
+            function enlarge() {
+                let i = document.getElementById("map");
+                let w = i.width;
+                i.width = w * (1 + 0.5)
+            }
+
+            function shrink() {
+                let i1 = document.getElementById("map");
+                let w2 = i1.width;
+                i1.width = w2 / (1 + 0.5);
+            }
+            
+
+
+
+        </script>
+    </head>
+
+    <body>
+
+        <h2> Manipulating Styles and Images </h2>
+
+        <p><img src="../Classwork/usa.png" alt="Image goes here" title="map of USA" width="400" onmouseover="enlarge()" id="map" onmouseout="shrink()"></p>
+
+        <hr>
+
+    </body>
+
+</html>

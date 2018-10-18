@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<title>Howework Assignment 2 - Part 2</title>
+
+<style>
+    
+    body{
+        background-color: black;
+        background-image: url(../classwork/beaver.jpg);
+        background-position: bottom;
+        background-repeat: repeat-x;
+        
+    }
+
+    h1{
+        color: white;
+        font-size: 3em;
+        text-align: center;
+        position: relative; top: 0; 
+
+
+    }
+    table{
+        background-color: silver;
+        border: 3px silver solid;
+        margin-right: auto;
+        margin-left: auto;
+        table-layout: fixed;
+        vertical-align: center;
+        position: relative; top: -4;
+    }
+
+    tr, td{
+        border: 2px black solid;
+    }
+    tr#line1{
+        text-align: center;
+    }
+
+    button#red{
+        background-color: red;
+       
+    }
+
+    td#row2{
+        text-align: center;
+    }
+
+    textarea#yellow1{
+        background-color: yellow;
+        width: 410;
+        height: 50;
+        margin-top: 5;
+        margin-bottom: 5
+    }
+
+    #yellow2{
+        background-color: yellow;
+    }
+
+    #row3{
+        background-color: white;
+        text-align: center;
+    }
+    #center1{
+        text-align: center;
+    }
+
+    #center2{
+        text-align: center;
+    }
+  
+
+
+    
+</style>
+
+</head>
+
+<body>
+
+    <h1>Soap Survey</h1>
+
+    <table>
+        <tr id="line1"><td>Soap Image</td><td><p>Soap Color</p><p>Preference</p></td><td><p>Soap Purchase</p><p>Intent</p></td><td>Soap Features Liked</td></tr>
+        <tr><td><p id="center2"><img src="../Homework/soap-2.jpg" width="150" height="100"></p></td> <td><input type="radio" name="color" value="green"> Green <br/>
+            <input type="radio" name="color" value="Gold"> Gold (Shown) <br/>
+            <input type="radio" name="color" value="Red"> Red</td>
+           <td>At $5.00/unit <br/>
+            <select name="preference"> 
+               <option value="5">Definetly Buy</option>
+               <option value="4">Likely Buy</option>
+               <option value="3">Undecided</option>
+               <option value="2">Unlikely Buy</option>
+               <option value="1">Not Buy</option>
+           </select></td>
+           <td> <input type="checkbox" name="Features" value="Shape">Shape <br/>
+                <input type="checkbox" name="Features" value="Size">Size <br/>
+                <input type="checkbox" name="Features" value="Smell">Smell <br/>
+                <input type="checkbox" name="Features" value="Texture">Texture <br/>
+            </td>
+        </tr>
+        <tr>
+                <td><p id="center1"><img src="../Homework/soap-1.jpg" id="pic1" height="100" width="150" ></p></td> <td><input type="radio" name="color" value="Ivory"> Ivory <br/>
+                    <input type="radio" name="color" value="Sandal Wood"> Sandal Wood (Shown) <br/>
+                    <input type="radio" name="color" value="Pink"> Pink</td>
+                   <td>At $8.00/unit <br/>
+                    <select name="preference"> 
+                       <option value="5">Definetly Buy</option>
+                       <option value="4">Likely Buy</option>
+                       <option value="3">Undecided</option>
+                       <option value="2">Unlikely Buy</option>
+                       <option value="1">Not Buy</option>
+                   </select></td>
+                   <td> <input type="checkbox" name="Features" value="Shape">Shape <br/>
+                        <input type="checkbox" name="Features" value="Size">Size <br/>
+                        <input type="checkbox" name="Features" value="Smell">Smell <br/>
+                        <input type="checkbox" name="Features" value="Texture">Texture <br/>
+        </tr>
+        <tr><td colspan="4" id="row3">Tell us about yourself....</td></tr>
+        <tr><td>Gender <select name="Gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+        </select></td>
+        <td colspan="3">Age (Under 25 enter 1, 25-40 enter 2, else enter 3) <input type="number" name="age" value="Age" max="3" min="1" width="5px" id="yellow2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Your comments are welcome:<br/> <textarea name="comments" rows="5" id="yellow1"></textarea> </td>
+            <td colspan="2" id="row2"><button type="submit" name="Done" value="submit" height>Done</button><button type="reset" name="Oops" id="red">Oops</button> </td>
+        
+        </tr>
+
+
+
+
+    </table>
+
+
+
+
+
+</body>
+
+
+</html>

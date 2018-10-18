@@ -1,0 +1,37 @@
+<html>
+
+
+<head>
+
+<title>Web Technologies</title>
+
+<script type="text/javascript">
+
+function calculate() {
+    let x = document.getElementById("x1").innerHTML;
+    alert(x);
+    let y = document.getElementById("y1").innerHTML;
+    let result = x*y;
+    //alert("The Result is, " + result);
+    document.getElementById("result").innerHTML = result;
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+
+    <h1></h1>
+
+    <p>x =<span id="x1">100</span></p>
+    <p>y =<span id="y1">11</span></p>
+    <p>The Result of calculation is <span id="result"></span>.</p>
+
+<button onclick="calculate()">Click me!</button>
+
+</body>
+
+</html>
