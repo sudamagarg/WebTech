@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework 3</title>
+        <style type="text/css">
+            h1 {
+                text-align: center;
+                font-family: Arial;
+                color: Navy;
+            }
+
+            img {
+                border: 6px solid navy;
+                margin-bottom: 100px;
+            }
+
+            p.cent {
+                text-align: center;
+            }
+
+            ul,
+            p#inst {
+                margin-right: 200px;
+                margin-left: 200px;
+                font-family: Cursive;
+                font-size: 1em;
+            }
+
+            li {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin-right: 20px;
+                background-color: White;
+                height: 50px;
+                width: 140px;
+            }
+        </style>
+        <script type="text/javascript">
+        function animal_img(x){
+                let a = document.getElementById("pic1");
+                let b = document.getElementById("heading1");
+                let m = document.getElementById("dog");
+                let n = document.getElementById("penguin");
+                let o = document.getElementById("leopard");
+                let p = document.getElementById("lynx");
+                if (x=="dog"){
+                        a.src = "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12233017/German-Shepherd-Dog-On-White-09.jpg";
+                        a.title = "German Shepherd";
+                        a.alt = "Picture of German Shepherd";
+                        a.style.border = "4px solid yellow";
+                        b.innerHTML = "German Shepherd";
+                        b.style.color = "yellow";
+                        m.style.backgroundColor = "silver";
+                        n.style.backgroundColor = "white";
+                        o.style.backgroundColor = "white";
+                        p.style.backgroundColor = "white";
+                }
+                else if (x=="penguin"){
+                        a.src = "https://www.birdlife.org/sites/default/files/styles/1600/public/slide.jpg?itok=HRhQfA1S";
+                        a.title = "Penguin";
+                        a.alt = "Picture of Penguin";
+                        a.style.border = "4px solid red";
+                        b.innerHTML = "Penguin";
+                        b.style.color = "red";
+                        n.style.backgroundColor = "silver";
+                        m.style.backgroundColor = "white";
+                        o.style.backgroundColor = "white";
+                        p.style.backgroundColor = "white";
+                }
+                else if (x=="leopard"){
+                        a.src = "https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2017/snowleopard.jpg";
+                        a.title = "Snow Leopard";
+                        a.alt = "Picture of Snow Leopard";
+                        a.style.border = "4px solid green";
+                        b.innerHTML = "Snow Leopard";
+                        b.style.color = "green";
+                        o.style.backgroundColor = "silver";
+                        m.style.backgroundColor = "white";
+                        n.style.backgroundColor = "white";
+                        p.style.backgroundColor = "white";
+                        
+                }
+                else if (x=="lynx"){
+                        a.src = "https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/tnc_96814429.jpg?crop=0,250,4288,2358&wid=4000&hei=2200&scl=1.072";
+                        a.title = "Lynx";
+                        a.alt = "Picture of Lynx";
+                        a.style.border = "4px solid lime";
+                        b.innerHTML = "Lynx";
+                        b.style.color = "lime";
+                        p.style.backgroundColor = "silver";
+                        m.style.backgroundColor = "white";
+                        n.style.backgroundColor = "white";
+                        o.style.backgroundColor = "white";
+                }
+        }
+        function inc(){
+            var a=document.getElementById("img1");
+            a=a.width;
+            a=parseFloat(a);
+            a=a*1.75;
+            document.getElementById("img1").width=a;
+        }
+        
+        function dec(){
+            var a=document.getElementById("img1");
+            a=a.width;
+            a=parseFloat(a);
+            a=a/1.75;
+            document.getElementById("img1").width=a;
+        }
+        </script>
+
+    </head>
+
+    <body>
+        <h1 id="heading1"> The Animal Name Goes Here</h1>
+        <p class="cent">
+            <img onmouseover="inc()" onmouseout="dec()" id="pic1" src="" alt="Image Goes Here" title="Animal Name"/>
+        </p>
+        <p class="cent">
+            <button id="dog" onclick="animal_img(this.id)">German Shepherd</button>
+            <button id="penguin" onclick="animal_img(this.id)">Penguin</button>
+            <button id="leopard" onclick="animal_img(this.id)">Snow Leopard</button>
+            <button id="lynx" onclick="animal_img(this.id)" id="last">Lynx</button>
+        </p>
+        <p id="inst">The homework is graded out of 25 points. Please create the functionality, using JavaScript, to do the following:</p>
+        <ul>
+            <li> Display the image of the animal corresponding to the button the user clicks on. The place-holder for the image
+                is provided to you. (8 points).</li>
+            <li> Change the color of the image border based on the animal displayed. Yellow for German Shepherd, Red for Penguin,Green
+                for Snow Leopard and, Lime for Lynx. If my color choices are poor, you can pick your own colors as long as
+                it is different and unique for each animal image.(4 points)</li>
+            <li> Change the heading, "The Animal Name Goes Here" to the type of animal shown. (3 points)</li>
+            <li> Change the background color of the button that the user clicks on to Silver. Only the button the user has clicked
+                on must be Silver. All others must be White.(5 points)</li>
+            <li> Please use a single function for all of the above functionality (5 points). If you cannot, please use as many
+                functions as needed (0 points)</li>
+        </ul>
+
+
+    </body>
+
+</html>
