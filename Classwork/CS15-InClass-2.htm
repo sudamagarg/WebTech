@@ -28,22 +28,25 @@
 
         <script type="text/javascript">
         
-        function convert()
+        function convert(){
 
         let myform = document.getElementById("form1");
-        let cel = myform.cel.value;
-        let far = myform.far.value;
+        let cels = myform.cel.value;
+        let farh = myform.far.value;
 
-        if ((cel.length == 0) && (far.length == 0)){
-            alert("Please Input Value")
+        if ((cel.length == "") && (far.length == "")){
+            alert("Please Input Value");
+        } else if((isNan(cels)==false) && (farh== "")) {
+            farh=parseFloat(cels)*(9/5)+32;
+            myform.far.value = farh;
+        } else if ((isNan(farh)==false) && (cels== "")) {
+            cels=(parseFloat(farh)-32)*(5/9);
+            myform.cel.value = cels;
         }
-        
 
-        cel = parseFloat(cel);
-        far = parseFloat(far);
-        
-        
-        
+        return false;
+
+        }
         
         
         </script>
@@ -59,7 +62,7 @@
             </div>
 
             <div style="margin-left:100px">
-                <input type="submit" name="submit" value="Convert" style="width:80px; height:40px;" onclick="convert()" />
+                <input type="submit" name="submit" value="Convert" style="width:80px; height:40px;" onclick=" return convert()" />
                 <input type="reset" name="reset" value="Clear" style="width:80px; height:40px;" />
             </div>
         </form>
