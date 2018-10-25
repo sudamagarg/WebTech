@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>CS15-InClass2 - Temperature Converter</title>
+        <style type="text/css">
+            form {
+                font-family: Arial;
+                font-weight: bold;
+                padding: 60px;
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: Silver;
+            }
+
+            h1 {
+                font-family: Arial;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            div#d1 {
+                margin-bottom: 40px;
+            }
+        </style>
+
+        <script type="text/javascript">
+        
+        function convert()
+
+        let myform = document.getElementById("form1");
+        let cel = myform.cel.value;
+        let far = myform.far.value;
+
+        if ((cel.length == 0) && (far.length == 0)){
+            alert("Please Input Value")
+        }
+        
+
+        cel = parseFloat(cel);
+        far = parseFloat(far);
+        
+        
+        
+        
+        
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <h1> Celsius Fahrenheit Converter</h1>
+        <form action="" method="post" id="form1">
+            <div id="d1">
+                Celsius: <input type="text" name="cel" size="10" /> Fahrenheit: <input type="text" name="far" size="10" />
+            </div>
+
+            <div style="margin-left:100px">
+                <input type="submit" name="submit" value="Convert" style="width:80px; height:40px;" onclick="convert()" />
+                <input type="reset" name="reset" value="Clear" style="width:80px; height:40px;" />
+            </div>
+        </form>
+
+
+    </body>
+
+</html>

@@ -98,19 +98,19 @@
                 }
         }
         function inc(){
-            var a=document.getElementById("img1");
+            let a=document.getElementById("pic1");
             a=a.width;
             a=parseFloat(a);
             a=a*1.75;
-            document.getElementById("img1").width=a;
+            document.getElementById("pic1").width=a;
         }
         
         function dec(){
-            var a=document.getElementById("img1");
+            let a=document.getElementById("pic1");
             a=a.width;
             a=parseFloat(a);
             a=a/1.75;
-            document.getElementById("img1").width=a;
+            document.getElementById("pic1").width=a;
         }
         </script>
 
@@ -119,7 +119,7 @@
     <body>
         <h1 id="heading1"> The Animal Name Goes Here</h1>
         <p class="cent">
-            <img onmouseover="inc()" onmouseout="dec()" id="pic1" src="" alt="Image Goes Here" title="Animal Name"/>
+            <img onmouseover="inc()" onmouseout="dec()" id="pic1" src="" alt="Image Goes Here" title="Animal Name" width="450" height="350"/>
         </p>
         <p class="cent">
             <button id="dog" onclick="animal_img(this.id)">German Shepherd</button>
