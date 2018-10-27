@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Array Demo</title>
+
+    <script type="text/javascript">
+
+    function choose(){
+
+        let ankur = document.getElementById("form1");
+        let userChoice;
+        // if (ankur.colors[0].checked) {
+        //     userChoice= ankur.colors[0].value;
+        // } 
+            
+        // else if (ankur.colors[1].checked) {
+        //     userChoice= ankur.colors[1].value;
+        // } else if (ankur.colors[2].checked) {
+        //     userChoice= ankur.colors[2].value;
+        // }
+
+        // else if (ankur.colors[3].checked) {
+        //     userChoice=ankur.colors[3].value;
+        // }
+        // else {
+        //     userChoice = "Not Chosen yet";
+        // }
+            
+        for (let i = 0; i< ankur.colors.length; ++i){
+
+            if (ankur.colors[i].checked) {
+                userChoice = ankur.colors[i].value;
+            }
+        }   
+
+        document.getElementById("choice").innerHTML = userChoice;
+
+        let x = "";
+        const tweets = ["dog","cat","rooster","tiger","falcon","beaver"]
+        
+        for(let i = 0; i<tweets.length; i++){
+            x = x + "<li>" tweets[i] + "</li>";
+
+        }
+
+        document.getElementById("tweet").innerHTML = x
+        
+        return false;
+
+    }
+    
+    
+    
+    
+    
+    </script>
+
+    
+    
+</head>
+
+<body>
+    
+
+    <form action="" method="POST" id="form1">
+
+        Red: <input type="radio" name="colors" value="red">
+        Blue: <input type="radio" name="colors" value="blue">
+        Yellow :<input type="radio" name="colors" value="yellow">
+        Green: <input type="radio" name="colors" value="green">
+
+        <button onclick="return choose()"> Click Me!</button>
+
+    </form>
+    <p> You Have Chosen <span id="choice"></span></p>
+
+
+
+
+
+
+
+</body>
+</html>
