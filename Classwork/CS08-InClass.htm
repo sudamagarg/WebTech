@@ -1,0 +1,79 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CS08-InClass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        body{
+            background-color: silver;
+        }
+
+        form{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: navy;
+            background-color: silver;
+        }
+
+        h1{
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: navy;
+            background-color: white;
+        }
+
+        
+    
+    
+    
+    </style>
+    
+</head>
+<body>
+        <h1>Web Forms</h1>
+        <form method="post" action="mailto:rgarg1@babson.edu"></form>
+
+        <p>Last Name: <input type="text" name="lname" maxlength="25"></td>
+            First Name: <input type="text" name="fname" maxlength="25"></td>
+        </p>
+        <p>
+            Gender: Male <input type="radio" value="male" name="gender">
+            Female <input type="radio" value="female" name="gender">
+        </p>
+        <p>
+            My Favorite Web Topics Are: <br/>
+            <input type="checkbox" value="1" name="html"> Basic Html <br/>
+            <input type="checkbox" value="2" name="css"> CSS <br/>
+            <input type="checkbox" value="3" name="tables"> Tables <br/>
+            <input type="checkbox" value="4" name="Forms"> FORMS
+        </p>
+        <p>
+            What Grade do you expect to Achieve? 
+            <select name="grade">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        </p>
+
+        <p>
+            Please Add Any Comments Here: <br/>
+            <textarea name="comments" rows="5" cols="29">Any Further Comments...</textarea>
+
+        </p>
+        <p>
+                <input type="submit" value="submit" name="submit">
+                <input type="reset" value="reset" name="reset">
+            </p>
+
+        </form>
+    
+</body>
+</html>

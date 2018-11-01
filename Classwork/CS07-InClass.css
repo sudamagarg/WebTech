@@ -1,0 +1,7 @@
+table{ width: 500px; margin-right: auto; margin-left: auto; font-family: Arial; background-color: red;}
+tr,td{border: 1px solid black; padding: 3px; vertical-align: top;}
+img{width: 100%}
+body{
+    background-image: url("../Classwork/beaver.jpg");
+    background-repeat: repeat;
+}

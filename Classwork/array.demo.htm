@@ -40,14 +40,13 @@
         document.getElementById("choice").innerHTML = userChoice;
 
         let x = "";
-        const tweets = ["dog","cat","rooster","tiger","falcon","beaver"]
+        const tweets = ["dog","cat","rooster","tiger","falcon","beaver"];
         
         for(let i = 0; i<tweets.length; i++){
-            x = x + "<li>" tweets[i] + "</li>";
-
+            x = x + "<li>" + tweets[i] + "</li>";
         }
 
-        document.getElementById("tweet").innerHTML = x
+        document.getElementById("tweet").innerHTML = x;
         
         return false;
 
