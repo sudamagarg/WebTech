@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Homework 4-1</title>
+
+        <style type="text/css">
+            h1 {
+                color: navy;
+                font-family: Arial;
+            }
+
+            p#instruction {
+                font-family: Cursive;
+                color: Navy;
+                margin-right: 300px;
+            }
+
+            form {
+                padding-left: 50px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                background-color: Silver;
+                font-family: Cursive;
+                color: Navy;
+                width: 60%;
+            }
+
+
+            body {
+                padding-left: 100px;
+            }
+
+            span {
+                color: Lime;
+            }
+        </style>
+        <script type="text/javascript">
+
+            function open(){
+                    
+                    let myform=document.getElementById("form1");
+                    let w1=myform.word1.value;
+                    let w2=myform.word2.value;
+                    let w3=myform.word3.value;
+
+                    if ((w1=="") || (w2=="") || (w3=="")){
+                        alert("Please select all the options");
+                    } else {
+
+                    myform.results.value = w1+ " "+ w2 +  " "+w3;
+                    
+                    }
+                
+            }
+
+            function display(){
+                let myform=document.getElementById("form1");
+
+                let r = Math.floor((Math.random()*3)+1);
+                let w1= myform.word1.options[r].value;
+
+                let x = Math.floor((Math.random()*3)+1);
+                let w2= myform.word2.options[x].value;
+                
+                let y = Math.floor((Math.random()*3)+1);
+                let w3= myform.word3.options[y].value;
+
+                myform.results.value=w1+ " "+ w2 +  " "+w3;
+
+                return false;
+            }
+
+
+        </script>
+    </head>
+
+    <body>
+        <h1> Homework 4-1: Make your own sentence</h1>
+        <p id="instruction">
+            Write a function that displays the sentence (consisting of 3 words) that the user creates by selecting one
+            word from each
+            of the three drop-down menus. The sentence must be displayed only when the user picks the third word (10
+            pts). No
+            additional
+            words are required. Validate the function by ensuring that the user selects one valid word from each - if
+            not,
+            provide an alert to the user indicating that the user must select a valid word. Nothing should be displayed
+            if
+            the user has not picked one from each list of words. (5 pts)
+			<br>
+			<br>
+            When the button is clicked, generate a sentence by randomly choosing words from each of the three drop-down
+            lists.(5 pts)
+
+        </p>
+        <form action="" id="form1">
+            <p>
+                The sentence is: <br /><textarea name="results" cols="40" rows="2"></textarea>
+            </p>
+            <p>
+                <select name="word1">
+                    <option selected value="">Select Word 1</option>
+                    <option value="I">I</option>
+                    <option value="We">We</option>
+                    <option value="They">They</option>
+                </select>
+            </p>
+            <p>
+                <select name="word2">
+                    <option selected value="">Select Word 2</option>
+                    <option value="will"> will</option>
+                    <option value="can"> can</option>
+                    <option value="must"> must</option>
+                </select>
+            </p>
+            <p>
+                <select onchange="open()" name="word3">
+                    <option selected value="">Select Word 3</option>
+                    <option value="eat."> eat.</option>
+                    <option value="study."> study.</option>
+                    <option value="play."> play.</option>
+                </select>
+            </p>
+
+            <button onclick="return display()">Random Sentence Generator</button>
+        </form>
+
+    </body>
+
+</html>
